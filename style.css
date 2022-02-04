@@ -1,4 +1,4 @@
-.employee-form {
+.shopping-form {
     border-style: solid;
     /* margin-bottom: 10px; */
     /* margin-left: 10px; */
@@ -10,20 +10,26 @@
     /* padding: 10px; */
 }
 
-.employees-table {
+.shopping-table {
     border-style: solid;
     /* margin-bottom: 10px; */
     /* margin-left: 10px; */
     padding: 20px;
     /* width: 50%; */
     margin: auto;
-    width: 70%;
+    width: 50%;
     /* border: 3px solid green; */
     /* padding: 10px; */
 }
 
+body {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body > table{
-    width: 80%;
+    width: 50%;
+    font-size: 45px;
 }
 
 table{
@@ -34,37 +40,53 @@ table.list{
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #ccc;
     text-align: left;
     padding: 8px;
+    text-align: left;
 }
 tr:nth-child(even),table.list thead>tr {
-    background-color: #dddddd;
+    background-color: #e9d9fc;
 }
 
-input[type=text], input[type=number] {
+input[type=text] {
     width: 100%;
-    padding: 8px 20px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+  
+input[type=text]:focus {
+    background-color: #e9d9fc;
 }
 
 input[type=submit] {
     width: 30%;
-    background-color: black;
-    color: white;
-    padding: 10px 18px;
-    /* margin: 0px 0; */
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e9d9fc;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    padding:10px 18px;
+    margin: 20px 0 10px 0; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+.export-action-buttons {
+    text-align: center;
+}
+
 form div.form-action-buttons{
-    text-align: right;
+    text-align: center;
 }
 
 a{

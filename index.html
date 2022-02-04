@@ -2,55 +2,54 @@
 <html>
 
 <head>
-    <title>
-        JavaScript CRUD Example Tutorial
-    </title>
+    <title>Shopping List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-	<h1><center>JavaScript CRUD Example Tutorial</center></h1>
-	<hr>
-			<div class="employee-form">
+	<h1><center>Shopping List</center></h1>
+			<div class="shopping-form">
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
-                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                        <input type="text" name="fullName" id="fullName">
+                        <label>Name</label><label class="validation-error hide" id="NameValidationError">This field is required.</label>
+                        <input type="text" name="Name" id="Name">
                     </div>
                     <div>
-                        <label>Email Id</label>
-                        <input type="text" name="email" id="email">
+                        <label>Brand</label>
+                        <input type="text" name="Brand" id="Brand">
                     </div>
                     <div>
-                        <label>Salary</label>
-                        <input type="text" name="salary" id="salary">
+                        <label>Quantity</label>
+                        <input type="text" name="Quantity" id="Quantity">
                     </div>
                     <div>
-                        <label>City</label>
-                        <input type="text" name="city" id="city">
+                        <label>Price</label>
+                        <input type="text" name="Price" id="Price">
                     </div>
-                    <div  class="form-action-buttons">
+                    <div class="form-action-buttons">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
 		</div>
 		<br/>
-		<div class = "employees-table">
-                <table class="list" id="employeeList">
+		<div class = "shopping-table">
+                <table class="list" id="shoppingList">
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>Email Id</th>
-                            <th>Salary</th>
-                            <th>City</th>
-                            <th>Actions</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
-
                     </tbody>
                 </table>
+                <div class="export-action-buttons">
+                    <input type="submit" value="Export">
+               </div>
         </div>
     <script src="script.js"></script>
 </body>
