@@ -1,6 +1,6 @@
 var selectedRow = null
 
-function onFormSubmit() {
+function FormSubmit() {
     if (validate()) {
         var formData = readFormData();
         if (selectedRow == null)
@@ -32,8 +32,8 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.Price;
     cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
+    cell4.innerHTML = `<a onClick="Edit(this)">Edit</a>
+                       <a onClick="Delete(this)">Delete</a>`;
 }
 
 function resetForm() {
@@ -44,7 +44,7 @@ function resetForm() {
     selectedRow = null;
 }
 
-function onEdit(td) {
+function Edit(td) {
     selectedRow = td.parentElement.parentElement;
     document.getElementById("Name").value = selectedRow.cells[0].innerHTML;
     document.getElementById("Brand").value = selectedRow.cells[1].innerHTML;
@@ -58,7 +58,7 @@ function updateRecord(formData) {
     selectedRow.cells[3].innerHTML = formData.Price;
 }
 
-function onDelete(td) {
+function Delete(td) {
     if (confirm('Are you sure to delete this item ?')) {
         row = td.parentElement.parentElement;
         document.getElementById("shoppingList").deleteRow(row.rowIndex);
